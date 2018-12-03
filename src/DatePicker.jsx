@@ -185,6 +185,7 @@ export default class DatePicker extends PureComponent {
           }
 
           ref.classList.remove(`${className}--above-label`);
+          ref.classList.remove(`${className}--before-label`);
 
           const collisions = detectElementOverflow(ref, document.body);
 
