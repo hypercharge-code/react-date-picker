@@ -200,6 +200,16 @@ export default class DatePicker extends PureComponent {
               ref.classList.add(`${className}--above-label`);
             }
           }
+
+          if (collisions.collidedRight) {
+            const overflowLeftAfterChange = (
+              collisions.overflowLeft + ref.clientWidth + this.wrapper.clientWidth
+            );
+
+            if (overflowLeftAfterChange < collisions.overflowRight) {
+              ref.classList.add(`${className}--before-label`);
+            }
+          }
         }}
       >
         <Calendar
