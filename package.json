@@ -1,6 +1,6 @@
 {
   "name": "@hypercharge/react-date-picker",
-  "version": "7.1.2",
+  "version": "7.1.3",
   "description": "A date picker for your React app.",
   "repository": {
     "type": "git",
