@@ -42,7 +42,7 @@ export default class DayInput extends PureComponent {
   render() {
     const { maxDay, minDay } = this;
     const {
-      className, disabled, itemRef, value, onChange, onKeyDown, required, showLeadingZeros,
+      className, disabled, readOnly, itemRef, value, onChange, onKeyDown, required, showLeadingZeros,
     } = this.props;
 
     const name = 'day';
@@ -58,6 +58,7 @@ export default class DayInput extends PureComponent {
           hasLeadingZero && `${className}__input--hasLeadingZero`,
         )}
         disabled={disabled}
+        readOnly={readOnly}
         name={name}
         max={maxDay}
         min={minDay}
@@ -86,6 +87,7 @@ export default class DayInput extends PureComponent {
 DayInput.propTypes = {
   className: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
   itemRef: PropTypes.func,
   maxDate: isMaxDate,
   minDate: isMinDate,
