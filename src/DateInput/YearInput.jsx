@@ -33,7 +33,7 @@ export default class YearInput extends PureComponent {
   render() {
     const { maxYear, minYear, yearStep } = this;
     const {
-      className, disabled, itemRef, value, onChange, onKeyDown, required,
+      className, disabled, readOnly, itemRef, value, onChange, onKeyDown, required,
     } = this.props;
 
     const name = 'year';
@@ -45,6 +45,7 @@ export default class YearInput extends PureComponent {
           `${className}__year`,
         )}
         disabled={disabled}
+        readOnly={readOnly}
         name={name}
         max={maxYear}
         min={minYear}
@@ -74,6 +75,7 @@ export default class YearInput extends PureComponent {
 YearInput.propTypes = {
   className: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
   itemRef: PropTypes.func,
   maxDate: isMaxDate,
   minDate: isMinDate,

@@ -98,6 +98,7 @@ export default class DatePicker extends PureComponent {
       calendarIcon,
       clearIcon,
       disabled,
+      readOnly,
       locale,
       maxDate,
       maxDetail,
@@ -117,6 +118,7 @@ export default class DatePicker extends PureComponent {
         <DateInput
           className={`${baseClassName}__inputGroup`}
           disabled={disabled}
+          readOnly={readOnly}
           locale={locale}
           isCalendarOpen={isOpen}
           maxDate={maxDate}
@@ -278,6 +280,7 @@ DatePicker.propTypes = {
   ]),
   clearIcon: PropTypes.node,
   disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
   isOpen: PropTypes.bool,
   name: PropTypes.string,
   returnValue: PropTypes.oneOf(['start', 'end', 'range']),

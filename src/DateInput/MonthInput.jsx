@@ -25,7 +25,7 @@ export default class MonthInput extends PureComponent {
   render() {
     const { maxMonth, minMonth } = this;
     const {
-      className, disabled, itemRef, value, onChange, onKeyDown, required, showLeadingZeros,
+      className, disabled, readOnly, itemRef, value, onChange, onKeyDown, required, showLeadingZeros,
     } = this.props;
 
     const name = 'month';
@@ -41,6 +41,7 @@ export default class MonthInput extends PureComponent {
           hasLeadingZero && `${className}__input--hasLeadingZero`,
         )}
         disabled={disabled}
+        readOnly={readOnly}
         name={name}
         max={maxMonth}
         min={minMonth}
@@ -69,6 +70,7 @@ export default class MonthInput extends PureComponent {
 MonthInput.propTypes = {
   className: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
   itemRef: PropTypes.func,
   maxDate: isMaxDate,
   minDate: isMinDate,

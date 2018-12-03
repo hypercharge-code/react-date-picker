@@ -259,6 +259,7 @@ export default class DateInput extends PureComponent {
     const {
       className,
       disabled,
+      readOnly,
       isCalendarOpen,
       maxDate,
       minDate,
@@ -268,6 +269,7 @@ export default class DateInput extends PureComponent {
     return {
       className,
       disabled,
+      readOnly,
       maxDate: maxDate || defaultMaxDate,
       minDate: minDate || defaultMinDate,
       onChange: this.onChange,
@@ -493,6 +495,7 @@ DateInput.defaultProps = {
 DateInput.propTypes = {
   className: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
   isCalendarOpen: PropTypes.bool,
   locale: PropTypes.string,
   maxDate: isMaxDate,
